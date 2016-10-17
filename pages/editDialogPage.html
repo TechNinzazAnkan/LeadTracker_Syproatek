@@ -1,0 +1,98 @@
+<div class="notifyOuterDiv">
+	<div class="notifyInnerDiv">
+		<div class="notifyHeader">Edit Existing Lead Details</div>
+			<div class="notifyBody">
+				<form class="form-horizontal" role="form" name="addEditFA">
+					<div class="form-group">
+						<label class="control-label " id="faIdValue" >ID:</label>
+						<div class="col-md-4">
+							<input type="tel" name="faIdValue" ng-readonly="true" ng-model="currentMode.data.st_id" class="readInputOnly">
+						</div>
+					</div> 
+					<div class="form-group">
+						<label class="control-label " id="faSubCode">Source Name:</label>
+						<div class="col-md-4">
+							<input type="text" name="faSubCode" ng-model="currentMode.data.st_source" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label " id="faOtherId">Company Name:</label>
+						<div class="col-md-4">
+							<input type="text" name="faOtherId" ng-model="currentMode.data.st_company" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label " id="faLotId">Contact Person:</label>
+						<div class="col-md-4">
+							<input type="text" name="faLotId" ng-model="currentMode.data.st_contactperson" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label " id="faShrinkageL">Email ID:</label>
+						<div class="col-md-4">
+							<input type="email" name="faShrinkageL" ng-model="currentMode.data.st_email" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label " id="faShrinkageW">Mobile No:</label>
+						<div class="col-md-4">
+							<input type="tel" maxlength="10" name="faShrinkageW" ng-model="currentMode.data.st_mobile" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label " id="faShrinkageW">Other Mobile:</label>
+						<div class="col-md-4">
+							<input type="tel" maxlength="10" name="faShrinkageW" ng-model="currentMode.data.st_mobile2" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label " id="faShrinkageW">Landline Number:</label>
+						<div class="col-md-4">
+							<input type="tel" maxlength="10" name="faShrinkageW" ng-model="currentMode.data.st_landline" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label " id="faShrinkageW">Contact Address:</label>
+						<div class="col-md-4">
+							<input type="tel" maxlength="10" name="faShrinkageW" ng-model="currentMode.data.st_address" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label" id="faRepeatSizeL">Sector:</label>
+						<div class="col-md-4">
+							<input type="text" name="faRepeatSizeL" ng-model="currentMode.data.st_sector" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label" id="faRepeatSizeL">Category of Services:</label>
+						<div class="col-md-4">
+							<input type="text" name="faRepeatSizeL" ng-model="currentMode.data.st_serviceCategory" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label" id="faRepeatSizeL">Standard's Reference:</label>
+						<div class="col-md-4">
+							<input type="text" name="faRepeatSizeL" ng-model="currentMode.data.st_requirement" required >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label" id="faRepeatSizeL">Business Details:</label>
+						<div class="col-md-4">
+							<input type="text" name="faRepeatSizeL" ng-model="currentMode.data.st_businessDetails" required >
+						</div>
+					</div>	
+				</form>
+			</div>
+			<div class="notifyFooter">
+				<div>
+					<button type="button"	 class="btn btn-default btn-md" ng-click="closeNotifyDialog()">
+		  				Cancel
+					</button>
+					<button type="button" class="btn btn-primary btn-md" ng-click="updateLeadData()">
+		  				Save
+					</button>				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

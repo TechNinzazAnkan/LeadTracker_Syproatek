@@ -1,0 +1,56 @@
+<div ng-include="'navbar/navbarPage.html'"></div>
+<div class="pagesStarting homePage">
+    <div class="col-md-12 col-sm-12 rightBlock" >
+        <table id="leadDataTable" class="table table-sm">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Source</th>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Mobile</th>
+                    <th>Category</th>
+                    <th>Sector</th>
+                    <th>City</th>
+                    <th>Requirement</th>
+                    <th>Created By</th>
+                    <th>Status</th>
+                    <th>Caller Date</th>
+                    <th>Next Action</th>
+                    <th>Lead Status</th>
+                    <th>Closure Date</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="a in loadData">
+                    <td>{{a.st_id}}</td>
+                    <td>{{a.st_source}}</td>
+                    <td>{{a.st_company}}</td>
+                    <td>{{a.st_contactperson}}</td>
+                    <td>{{a.st_mobile}}</td>
+                    <td>{{a.st_serviceCategory}}</td>
+                    <td>{{a.st_sector}}</td>
+                    <td>{{a.st_city}}</td>
+                    <td>{{a.st_requirement}}</td>
+                    <td>{{a.st_createdby}}</td>
+                    <td>{{a.st_status}}</td>
+                    <td>{{a.st_callerdate}}</td>
+                    <td>{{a.st_nextAction}}</td>
+                    <td>{{a.st_leadStatus}}</td>
+                    <td>{{a.st_exClosureDate}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="loader-backdrop" ng-show="$root.showLoader">
+    <div class="loader-back">
+        <div class="ex-container">
+            <img src="images/load2.gif">
+        </div>
+    </div>
+</div>

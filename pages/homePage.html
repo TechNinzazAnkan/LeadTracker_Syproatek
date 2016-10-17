@@ -1,0 +1,224 @@
+<div ng-include="'navbar/navbarPage.html'"></div>
+<div class="pagesStarting homePage">
+    <div class="inputBlocks">
+        <div class="contentAlignment">
+            <div class="row garmentset_form_row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="sourceReference">Source of reference</label>
+                        <select class="form-control" ng-model="submit_formData.st_source">
+                            <option value="">---Please select---</option>
+                            <option value="Just Dial">Just dial </option>
+                            <option value="Reference">Reference </option>
+                            <option value="Database">Database</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="prosOrgName">Prospect Org's name</label>
+                        <input type="text" ng-model="submit_formData.st_company" class="form-control" id="prospectName" placeholder="Prospect Org's name">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactPerson">Contact Person</label>
+                        <input type="text" ng-model="submit_formData.st_contactperson" class="form-control" id="personName" placeholder="Prospect Org's Contact Person">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactMail">Contact Email</label>
+                        <input type="email" ng-model="submit_formData.st_email" class="form-control" id="email" placeholder="Prospect Org's Contact Email" />
+                    </div>
+                </div>
+            </div>
+            <div class="row garmentset_form_row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactMob">Contact Mobile Number</label>
+                        <input type="tel" ng-model="submit_formData.st_mobile" class="form-control" maxlength="10" id="mobile" placeholder="Prospect Org's Mobile Number" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactMob">Other Mobile Number</label>
+                        <input type="tel" ng-model="submit_formData.st_mobile2" class="form-control" maxlength="10" id="mobile" placeholder="Prospect Org's Other Mobile Number" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactLand">Contact Landline Number</label>
+                        <input type="tel" ng-model="submit_formData.st_landline" class="form-control" maxlength="10" id="landline" placeholder="Prospect Org's Landline Number" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactAddress">Contact Address</label>
+                        <input type="textarea" ng-model="submit_formData.st_address" class="form-control" maxlength="150" id="address" placeholder="Prospect Org's Address" />
+                    </div>
+                </div>
+            </div>
+            <div class="row garmentset_form_row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactAddress">City, Pincode</label>
+                        <input type="textarea" ng-model="submit_formData.st_city" class="form-control" maxlength="150" id="city" placeholder="Prospect Org's City, Pincode" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="contactwebsite">Prospect Org's Website</label>
+                        <input type="text" ng-model="submit_formData.st_website" class="form-control"  id="website" placeholder="Prospect Org's Website" />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="sector">Sector</label>
+                        <select class="form-control" ng-model="submit_formData.st_sector" id="sector" name="sector">
+                            <option value="">---Please select---</option>
+                            <option value="IT">IT</option>
+                            <option value="ITES">ITES</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Health Care">Health Care</option>
+                            <option value="Education">Education</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Banking and Finance">Banking and Finance</option>
+                            <option value="Logistics">Logistics</option>
+                            <option value="Food">Food</option>
+                            <option value="Automotive">Automotive</option>
+                            <option value="Aero Space">Aero Space</option>
+                            <option value="Real Estate">Real Estate</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="categoryService">Category of Services</label>
+                        <select class="form-control" ng-model="submit_formData.st_serviceCategory" id="categoryService" name="categoryService">
+                            <option value="">---Please select---</option>
+                            <option value="CONSULTING">Consulting</option>
+                            <option value="TRAINING">Training</option>
+                            <option value="CERTIFICATION">Certification</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row garmentset_form_row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="sourceReference">Standard's Reference</label>
+                        <select class="form-control" id="requirement" ng-model="submit_formData.st_requirement" name="source">
+                            <option value="">---Please select---</option>
+                            <option value="ISO 9001-QMS">ISO 9001-QMS</option>
+                            <option value="ISO 14001-EMS">ISO 14001-EMS</option>
+                            <option value="OHSAS 18001">OHSAS 18001</option>
+                            <option value="ISO 22001-FSMS">ISO 22001-FSMS</option>
+                            <option value="ISO 27001-ISMS">ISO 27001-ISMS</option>
+                            <option value="ISO 13485-QMSMD">ISO 13485-QMSMD</option>
+                            <option value="TS 16949">TS 16949</option>
+                            <option value="AS 9100c">AS 9100c</option>
+                            <option value="PS 9000">PS 9000</option>
+                            <option value="6Sigma">6Sigma</option>
+                            <option value="CMMi">CMMi</option>
+                            <option value="NABL">NABL</option>
+                            <option value="ISI">ISI</option>
+                            <option value="CE Marking">CE Marking</option>
+                            <option value="3dmodeling">3dmodeling</option>
+                            <option value="3dWalkthrough">3dWalkthrough</option>
+                            <option value="Autocad training">Autocad training</option>
+                            <option value="3dsmax training">3dsmax training</option>
+                            <option value="GIS training">GIS training</option>
+                            <option value="ISO training">ISO training</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="callerDate">Caller Date</label>
+                        <input type="date" ng-model="submit_formData.st_callerdate" class="date form-control" id="cdate"  />
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="requirementStatus">Status</label>
+                        <select class="form-control" ng-model="submit_formData.st_status" id="requirementStatus" name="requirementStatus">
+                            <option value="">---Please select---</option>
+                            <option value="CALL_PENDING">CALL_PENDING</option>
+                            <option value="LOST">LOST</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="businessDetails">Business Details</label>
+                        <input type="text" ng-model="submit_formData.st_businessDetails" class="form-control"  id="website" placeholder="Kindly add business details" required />
+                    </div>
+                </div>
+            </div>
+            <div class="row garmentset_form_row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <div class="col-md-10 col-sm-10">
+                          <button type="submit" id="submitButton" class="btn btn-default" ng-click="addDetails(submit_formData)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-md-12 col-sm-12 rightBlock" >
+        <table id="leadDataTable" class="table table-sm">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Source</th>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Mobile</th>
+                    <th>Category</th>
+                    <th>Sector</th>
+                    <th>City</th>
+                    <th>Requirement</th>
+                    <th>Created By</th>
+                    <th>Status</th>
+                    <th>Caller Date</th>
+                    <th>Next Action</th>
+                    <th>Lead Status</th>
+                    <th>Closure Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="a in loadData">
+                    <td>{{a.st_id}}</td>
+                    <td>{{a.st_source}}</td>
+                    <td>{{a.st_company}}</td>
+                    <td>{{a.st_contactperson}}</td>
+                    <td>{{a.st_mobile}}</td>
+                    <td>{{a.st_serviceCategory}}</td>
+                    <td>{{a.st_sector}}</td>
+                    <td>{{a.st_city}}</td>
+                    <td>{{a.st_requirement}}</td>
+                    <td>{{a.st_createdby}}</td>
+                    <td>{{a.st_status}}</td>
+                    <td>{{a.st_callerdate}}</td>
+                    <td>{{a.st_nextAction}}</td>
+                    <td>{{a.st_leadStatus}}</td>
+                    <td>{{a.st_exClosureDate}}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/><br/>
+</div>
+<div class="loader-backdrop" ng-show="$root.showLoader">
+    <div class="loader-back">
+        <div class="ex-container">
+            <img src="images/load2.gif">
+        </div>
+    </div>
+</div>

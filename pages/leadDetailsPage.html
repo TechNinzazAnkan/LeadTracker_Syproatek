@@ -1,0 +1,146 @@
+<div ng-include="'navbar/navbarPage.html'"></div>
+<div class="pagesStarting">
+	<div class="col-md-6" id="prefilledInfo">
+		<h2>Prefilled Information</h2>
+        <a ui-sref="home"><button id="editPage" class="btn btn-success"> Edit </button></a>
+        <br><br>
+        <div id="leftBlockPrefilled" ng-repeat="t in LableNames track by $index">
+            <label>{{t.name}}</label>
+            <span>{{prefilledValues[t.value]}}</span><br/>
+        </div>
+	</div>
+	<div class="col-md-6">
+		<h2>Sales-caller Update Information</h2>
+        <div class="inputBlocks">
+            <div class="contentAlignment">
+                <div class="row garmentset_form_row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="categoryService">Category of Services</label>
+                            <select class="form-control" ng-model="formData.st_serviceCategory" id="categoryService" name="categoryService">
+                                <option ng-show="!formData.st_serviceCategory" value="">---Please select---</option>
+                                <option value="CONSULTING">Consulting</option>
+                                <option value="TRAINING">Training</option>
+                                <option value="CERTIFICATION">Certification</option>
+                                <option value="CONSULTING & CERTIFICATION">Consulting & Certification</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="sourceReference">Standard's Reference</label>
+                            <select class="form-control" id="requirement" ng-model="formData.st_requirement" name="source">
+                                <option ng-show="!formData.st_requirement" value="">---Please select---</option>
+                                <option value="ISO 9001-QMS">ISO 9001-QMS</option>
+                                <option value="ISO 14001-EMS">ISO 14001-EMS</option>
+                                <option value="OHSAS 18001">OHSAS 18001</option>
+                                <option value="ISO 22001-FSMS">ISO 22001-FSMS</option>
+                                <option value="ISO 27001-ISMS">ISO 27001-ISMS</option>
+                                <option value="ISO 13485-QMSMD">ISO 13485-QMSMD</option>
+                                <option value="TS 16949">TS 16949</option>
+                                <option value="AS 9100c">AS 9100c</option>
+                                <option value="PS 9000">PS 9000</option>
+                                <option value="6Sigma">6Sigma</option>
+                                <option value="CMMi">CMMi</option>
+                                <option value="NABL">NABL</option>
+                                <option value="ISI">ISI</option>
+                                <option value="CE Marking">CE Marking</option>
+                                <option value="3dmodeling">3dmodeling</option>
+                                <option value="3dWalkthrough">3dWalkthrough</option>
+                                <option value="Autocad training">Autocad training</option>
+                                <option value="3dsmax training">3dsmax training</option>
+                                <option value="GIS training">GIS training</option>
+                                <option value="ISO training">ISO training</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row garmentset_form_row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="nextAction">Next Actions</label>
+                            <select class="form-control" required ng-model="formData.st_nextAction" id="nextAction" name="nextAction">
+                                <option value="">---Please select---</option>
+                                <option value="Visit the customer for presentation">Visit the customer for presentation</option>
+                                <option value="Submit quotes">Submit quotes</option>
+                                <option value="Collect advance">Collect advance</option>
+                                <option value="Sign documents">Sign documents</option>
+                                <option value="Conduct audits">Conduct audits</option>
+                                <option value="Conduct training">Conduct training</option>
+                                <option value="Issue certificate">Issue certificate</option>
+                                <option value="Recheck database">Recheck database</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="nextActionDate">Next Action Date</label>
+                            <input type="date" required ng-model="formData.st_nextActionDate" class="form-control" id="exClosureDate" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row garmentset_form_row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="executiveAssignee">Sales Executive</label>
+                            <input type="text" required ng-model="formData.st_salesExecutive" class="form-control" id="leadValue" placeholder="Lead Value in Rupees">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="exClosureDate">Expected Closure Date</label>
+                            <input type="date" required ng-model="formData.st_exClosureDate" class="form-control" id="exClosureDate" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row garmentset_form_row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="executiveAssignee">Lead Status</label>
+                            <select class="form-control" required ng-model="formData.st_leadStatus" id="executiveAssignee" name="executiveAssignee">
+                                <option value="">---Please select---</option>
+                                <option value="WON">WON</option>
+                                <option value="HOT">HOT</option>
+                                <option value="WARM">WARM</option>
+                                <option value="COLD">COLD</option>
+                                <option value="LOST">LOST</option>
+                                <option value="Not Reachable">Not Reachable</option>
+                                <option value="Yet to Call">Yet to Call</option>
+                                <option value="Not Interested">Not Interested</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="leadValue">Lead Value</label>
+                            <input type="number" required ng-model="formData.st_leadValue" class="form-control" id="leadValue" placeholder="Lead Value in Rupees">
+                        </div>
+                    </div>
+                </div>
+                <div class="row garmentset_form_row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="remarks">Remarks</label>
+                            <textarea ng-model="formData.st_remarks" class="form-control" id="remarks" maxlength="500" required placeholder="Kindly add remarks respect to individual Leads"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row garmentset_form_row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                              <button type="submit" id="loginButton" class="btn btn-default" ng-disabled="salesCallerUpdateForm.$invalid" ng-click="updateDetails(formData)">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	</div>
+</div>
+<div class="loader-backdrop" ng-show="$root.showLoader">
+    <div class="loader-back">
+        <div class="ex-container">
+            <img src="images/load2.gif">
+        </div>
+    </div>
+</div>

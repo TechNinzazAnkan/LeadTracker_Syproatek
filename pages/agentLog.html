@@ -1,0 +1,35 @@
+<div class="loginBox">	
+	<div id="loginPopup">
+		<div class="boxBorder clearfix">
+			<div id="leftBlock">
+				<h2>Login </h2>
+				<div class="bottomPart">
+					<a ui-sref="agentSignUp" style="color:#b5b5bd">Create Account</a><br>
+					<a ui-sref="#" style="color:#b5b5bd"  target="blank">Forget Password</a><br>
+				</div>
+			</div>
+			<div id="rightBlock">
+				<form id="loginForm">
+					 <div class="form-group">
+	                    <label for="leadValue">Email ID</label>
+	                    <input type="text" ng-model="loginData.st_reg_email" class="form-control boxWidth input-sm" id="userName" placeholder="Enter Email ID" required />
+	                </div>
+					<div class="form-group">
+						<label>Password</label><br/><br/>
+						<input type="password" ng-model="loginData.st_reg_password	" class="form-control boxWidth input-sm" id="userPwd" placeholder="Enter Password" required /><br/><br/>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-default" ng-disabled="salesCallerUpdateForm.$invalid" id="loginButton" ng-click="agentLogin(loginData)">Login</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="loader-backdrop" ng-show="$root.showLoader">
+    <div class="loader-back">
+        <div class="ex-container">
+        	<img src="http://www.dhrovspiralpapercore.in/img/loader-light.gif">
+        </div>
+    </div>
+</div>

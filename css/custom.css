@@ -1,0 +1,638 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	line-height: 22px;
+  background-image: url('../images/texture1.jpg');
+}
+
+/* Autohide navbar */
+.slideUp { top:-100px; }
+.headroom { -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; -o-transition: all 0.4s ease-out; transition: all 0.4s ease-out; }
+
+.navbar-inverse {
+	min-height: 70px;
+	padding-top: 10px;
+}
+.collapse{
+	margin-right: 10px !important;
+}
+
+.pagesStarting{
+    padding-top: 70px !important;
+}
+
+/*	Home Page CSS	*/
+
+hr {
+    max-width: 50px;
+    border-color: #f05f40;
+    border-width: 3px;
+}
+hr.light {
+    border-color: #fff;
+}
+
+.text-primary {
+    color: #f05f40;
+}
+
+/*  Footer Related CSS */
+
+#footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+  background: #2e2e2e;
+}
+
+#footer a {
+  color: #fff;
+}
+
+#footer a:hover {
+  color: #e68523;
+}
+
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer ul > li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+#logoPosition {
+  height: 65px !important;
+  margin-top: -23px !important;
+}
+
+.rightBlock{
+  padding-top: 35px;
+}
+
+#leftBlockPrefilled label{
+  width:40%;
+  text-align: right;
+  border-right: 2px solid white;
+  margin: 0 !important;  
+  padding: 5px;
+  color: white;
+}
+
+#leftBlockPrefilled span{
+  width:99%;
+  padding: 5px;
+  color: white;
+}
+
+#leftBlockPrefilled{
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+
+#editPage{
+  float: right;
+}
+
+.logInUser{
+  color: aqua !important;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/*  Agents Login and Sign Up Related CSS */
+
+.loginBox{
+  margin-right:auto;
+  margin-left:auto;
+  width:426px;
+  height:100vh;
+  display: table;
+}
+.boxBorder{
+    border: 5px solid #75757c;
+    border-radius: 15px 15px 15px 15px;   
+    box-shadow: 0 10px 70px #221817;
+}
+#loginPopup {
+  display: table-cell;
+  vertical-align: middle;
+  border-radius: 15px 15px 15px 15px;
+  /*box-shadow: 0 1px 2em #221817;*/
+}
+
+#leftBlock {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#523333+0,261313+100 */
+  background: #523333; /* Old browsers */
+  background: -moz-linear-gradient(top,  #523333 0%, #261313 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #523333 0%,#261313 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #523333 0%,#261313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#523333', endColorstr='#261313',GradientType=0 ); /* IE6-9 */
+
+
+  float:left;
+  width: 30%;
+  height: 220px;      
+  text-align: center;
+  font-family:arial;
+  font-weight:bold;
+  color:#bb9991;
+  /*position: relative;*/
+  /*display:inline-block;*/
+  border-radius: 10px 0 0 10px;
+}
+
+.bottomPart{
+  width:100%;
+  font-size:11px;
+  padding-top: 75px;
+}
+
+#rightBlock {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5b5bd+0,4f4f54+100 */
+  background: #b5b5bd; /* Old browsers */
+  background: -moz-linear-gradient(top,  #b5b5bd 0%, #4f4f54 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #b5b5bd 0%,#4f4f54 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #b5b5bd 0%,#4f4f54 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5b5bd', endColorstr='#4f4f54',GradientType=0 ); /* IE6-9 */
+
+
+  /*position:absolute;*/      
+  float:left;
+  display:inline-block;
+  width: 70%;
+  height: 220px;
+  background-color: #cacacb; 
+  border-radius: 0 10px 10px 0;
+}
+#loginForm{
+  text-align:left;
+  font-family:arial;
+  color:white;
+  font-weight:bold;
+  font-size:13px;
+  padding-left:30px;
+  padding-top:20px;
+  line-height: 10px;
+}
+#loginButton {
+  color:#bb9991; font-weight:bold; background-color:    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#523333+0,261313+100 */
+  background: #523333; /* Old browsers */
+  background: -moz-linear-gradient(top,  #523333 0%, #261313 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #523333 0%,#261313 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #523333 0%,#261313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#523333', endColorstr='#261313',GradientType=0 ); /* IE6-9 */;
+
+  border:none; 
+  padding: 10px 15px 10px 15px; 
+  border-radius:5px; 
+  box-shadow: 0 3px 5px  #414141; 
+  /*left:110px;
+  top:125px;*/
+}
+
+#loginForm .form-control{
+  width: 77% !important;
+}
+#loginForm .form-group{
+  margin-bottom: 10px !important;
+}
+
+#signUpleftBlock{
+  background: #523333; /* Old browsers */
+  background: -moz-linear-gradient(top,  #523333 0%, #261313 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #523333 0%,#261313 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #523333 0%,#261313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#523333', endColorstr='#261313',GradientType=0 ); /* IE6-9 */
+  float:left;
+  display:inline-block;
+  width: 150px;
+  height: 520px;      
+  text-align: center;
+  font-family:arial;
+  font-weight:bold;
+  color:#bb9991;
+  position: relative;
+  border-radius: 10px 0 0 10px;
+}
+
+#signUprightBlock{
+  background: #b5b5bd; /* Old browsers */
+  background: -moz-linear-gradient(top,  #b5b5bd 0%, #4f4f54 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #b5b5bd 0%,#4f4f54 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #b5b5bd 0%,#4f4f54 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5b5bd', endColorstr='#4f4f54',GradientType=0 ); /* IE6-9 */
+  position:absolute;      
+  display:inline-block;
+  width: 350px;
+  height: 520px;
+  background-color: #cacacb; /*gray*/
+  border-radius: 0 10px 10px 0;
+}
+
+.SignUpBorder{
+    width: 509px;
+    border: 5px solid #75757c;
+    border-radius: 15px 15px 15px 15px;   
+    box-shadow: 0 10px 70px #221817;
+}
+
+.signUpBottomPart{
+  position: absolute;
+  left:0;
+  bottom:10%;
+  width:100%;
+  font-size:11px;
+  line-height:10px;
+}
+
+
+input[type="radio"] {
+  margin-top: -1px !important;
+  margin-left: -15px !important;
+}
+
+
+
+
+/*  Pop-Up Message related CSS  */
+.ngdialog-content {
+    padding: 0px !important;
+    background-color: white !important;
+    width: 595px !important;
+    text-align: center;
+    border-radius: 0px !important;
+    z-index: 999;
+}
+.notification-shot-desc {
+    font-family: "Open Sans Regular";
+    color: #666;
+    font-size: 18px;
+    line-height: 100%;
+}
+.notification-header {
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f2;
+}
+
+.notification-long-desc {
+    font-family: "Open Sans Regular";
+    color: #999;
+    font-size: 22px;
+    margin: 20px;
+}
+.suggestedFitSizeTable{
+    width:80%;
+    margin: 10px auto;
+    border: 1px solid black;
+    margin-bottom:1em;
+}
+.suggestedFitSize_td{
+    padding: 0;
+    border: 1px solid black;
+    border-collapse: separate;
+}
+
+.cancel-proceed-container .btn {
+  font-family: "Open Sans Semibold";
+  color: white;
+  background-color: #25A7AD;
+  border-radius: 0px;
+  font-size: 14px;
+  padding: 7px 21px !important;
+}
+.cancel-proceed-container{
+  padding-bottom: 20px;
+}
+.cancel-proceed-container.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: none;
+}
+.cancel-proceed-container .btn:active, .btn.active {
+  box-shadow: none;
+}
+
+/*  Lead Edit Flow Dialog related CSS   */
+
+.notifyHeader{
+    height:50px !important;
+    font-size:20px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #f1f1f2            
+}
+
+.notifyBody{
+  padding:10px 0px 10px 30px;
+  border-bottom: 1px solid #f1f1f2;
+}
+
+.notifyBody form div label{
+  width: 33.33% !important;
+  float: left;
+}
+
+.notifyBody div input{
+  width:200px !important;
+  padding-left:5px !important;
+}
+
+.notifyFooter{
+  padding:10px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #FFF !important;
+}
+
+table.dataTable tbody tr:nth-child(odd) {
+    background: #ccc !important;
+}
+
+
+table#leadDataTable tbody td {
+  color: black !important;
+}
+
+#leadDataTable_length label{
+  color: white;
+}
+#leadDataTable_length label select{
+  color: black;
+}
+
+#leadDataTable_filter label{
+  color: white;
+}
+#leadDataTable_filter  label input{
+  color:black;
+}
+.inputBlocks{
+  margin:10px;
+  background-color: rgba(255,255,255,.2);
+}
+
+/* Home page content added */
+.contentAlignment{
+  padding-left: 5em !important;
+  padding-right: 5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.contentAlignment label {
+  font-size: 15px;
+  padding-left: 12px;
+  /*font-family: "Open Sans Regular";*/
+}
+.contentAlignment select {
+  width: 220px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #A6D0ED;
+  color: #000;
+  font-family: "Open Sans Regular";
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contentAlignment input {
+  width: 220px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #A6D0ED;
+  color: #000;
+  font-family: "Open Sans Regular";
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.contentAlignment textarea {
+  background: #fff;
+  border: 1px solid #A6D0ED;
+  color: #000;
+  font-family: "Open Sans Regular";
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#submitButton {
+  float: right;
+  color: white; 
+  font-weight:bold; 
+  background-color:  #262626;
+  background: #262626;
+  background: #262626;
+  background: #262626;
+  background: #262626;
+  border:none; 
+  padding: 10px 15px 10px 15px; 
+  border-radius:0px; 
+  box-shadow: 0 3px 5px  #262626; 
+  /*left:110px;
+  top:125px;*/
+}
+
+
+
+.ex {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.70);
+    z-index: 9999999999;
+    border-radius: 15px 15px 15px 15px;
+}
+
+/*.ex-container {
+    width: 110px;
+    margin: auto;
+    vertical-align: middle;
+    position: absolute;
+    top: 39px;
+    left: 14px;
+}*/
+
+/* loader */
+
+@-moz-keyframes circles-loader {
+    0% {
+        -moz-transform: rotate(-720deg);
+        transform: rotate(-720deg);
+    }
+    50% {
+        -moz-transform: rotate(720deg);
+        transform: rotate(720deg);
+    }
+}
+
+@-webkit-keyframes circles-loader {
+    0% {
+        -webkit-transform: rotate(-720deg);
+        transform: rotate(-720deg);
+    }
+    50% {
+        -webkit-transform: rotate(720deg);
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes circles-loader {
+    0% {
+        -moz-transform: rotate(-720deg);
+        -ms-transform: rotate(-720deg);
+        -webkit-transform: rotate(-720deg);
+        transform: rotate(-720deg);
+    }
+    50% {
+        -moz-transform: rotate(720deg);
+        -ms-transform: rotate(720deg);
+        -webkit-transform: rotate(720deg);
+        transform: rotate(720deg);
+    }
+}
+
+
+/* :not(:required) hides this rule from IE9 and below */
+
+.loader-back {
+    height: 110px;
+    width: 111px;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    background-color: #FFF;
+    border-radius: 7px;
+    background-color: transparent;
+}
+
+.circles-loader:not(:required) {
+    position: relative;
+    text-indent: -9999px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 204, 51, 0.9);
+    border-radius: 100%;
+    -moz-animation: circles-loader 3s infinite ease-in-out;
+    -webkit-animation: circles-loader 3s infinite ease-in-out;
+    animation: circles-loader 3s infinite ease-in-out;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+
+.circles-loader:not(:required)::before {
+    background: rgba(255, 102, 0, 0.6);
+    border-radius: 100%;
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 18.75px;
+    left: -10.82532px;
+}
+
+.circles-loader:not(:required)::after {
+    background: rgba(255, 51, 0, 0.4);
+    border-radius: 100%;
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 18.75px;
+    left: 10.82532px;
+}
+
+.circles-loader {
+    left: 23px;
+    top: 9px;
+}
+
+.loader-backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.70);
+    z-index: 9999999999;
+}
+
+.ex-container {
+    width: 110px;
+    margin: auto;
+    vertical-align: middle;
+    position: absolute;
+    top: 39px;
+    left: 14px;
+    .head2 {
+        color: #fff;
+    }
+}
+
+.ex {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1.5px;
+    text-align: center;
+    width: 90px;
+    margin-top: 20px;
+    -webkit-animation: fade 3s infinite;
+    font-size: 4em;
+    width: 40px;
+    height: 40px;
+    margin-top: -17px;
+    display: inline-block;
+    border: 4px double white;
+}
+
+.filter-options {
+    padding-top: 5px;
+}
+
+.ex:nth-child(1) {
+    -webkit-animation: spin1 2s infinite 0.5s;
+    -webkit-transform-origin: 50% 52%;
+    -moz-animation: spin1 2s infinite 0.5s;
+    -moz-transform-origin: 50% 52%;    
+    margin-left: 10px;
+}
+
+.ex:nth-child(2) {
+    -webkit-animation: spin2 2s infinite 0.5s;
+    -webkit-transform-origin: 50% 52%;
+    -moz-animation: spin2 2s infinite 0.5s;
+    -moz-transform-origin: 50% 52%;    
+    margin-left: -20px;
+}
+
+.ex:nth-child(3) {
+    -webkit-animation: spin2 2s infinite 0.5s;
+    -webkit-transform-origin: 50% 52%;
+    -moz-animation: spin2 2s infinite 0.5s;
+    -moz-transform-origin: 50% 52%;    
+    margin-left: 10px;
+}
+
+.ex:nth-child(4) {
+    margin-left: -1px;
+    -webkit-animation: spin1 2s infinite 0.5s;
+    -webkit-transform-origin: 50% 52%;
+    -moz-animation: spin1 2s infinite 0.5s;
+    -moz-transform-origin: 50% 52%;    
+    margin-left: -20px;
+}
+
+span.lowerize {
+    text-transform: lowercase;
+}
+
