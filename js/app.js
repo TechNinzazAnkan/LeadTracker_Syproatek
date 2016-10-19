@@ -39,6 +39,11 @@ angular.module('ninzazAngular', ['ui.router','ngDialog','ninzazAngular.controlle
 			templateUrl : 'pages/leadDetailsPage.html',
 			controller :'leadDetailsCtrl'
 		})
+		.state('leadSummaryView',{
+			url: '/leadSummary/:id',
+			templateUrl : 'pages/leadSummaryView.html',
+			controller :'leadSummaryViewCtrl'
+		})
 		/*
 		.state('listingPage',{
 			url: '/listingPage',

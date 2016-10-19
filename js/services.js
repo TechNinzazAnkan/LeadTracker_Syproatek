@@ -8,6 +8,7 @@ angular.module('ninzazAngular.services', [])
         return $http({
             method: 'POST',
             url: "http://localhost/LeadTracker/backend.php",
+            //url: "http://localhost/LeadTracker_Syproatek/backend.php",
 			headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
             }, // set the headers so angular passing info as form data (not request payload)
@@ -21,6 +22,20 @@ angular.module('ninzazAngular.services', [])
         return $http({
             method: 'POST',
             url: "http://localhost/LeadTracker/backend.php",
+            //url: "http://localhost/LeadTracker_Syproatek/backend.php",
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+            }, // set the headers so angular passing info as form data (not request payload)
+            data: data
+        })    
+    },
+    service.updateSalesCallerData = function(data) {
+        data.func = 'updateSalesCallerData';
+        //console.log("Into Service File", JSON.stringify(data));
+        return $http({
+            method: 'POST',
+            url: "http://localhost/LeadTracker/backend.php",
+            //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
             }, // set the headers so angular passing info as form data (not request payload)
@@ -36,6 +51,7 @@ angular.module('ninzazAngular.services', [])
         return $http({
             method: 'POST',
             url: "http://localhost/LeadTracker/backend.php",
+            //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
             }, // set the headers so angular passing info as form data (not request payload)
@@ -52,6 +68,7 @@ angular.module('ninzazAngular.services', [])
         return $http({
             method: 'POST',
             url: "http://localhost/LeadTracker/backend.php",
+            //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
             }, // set the headers so angular passing info as form data (not request payload)
@@ -67,6 +84,7 @@ angular.module('ninzazAngular.services', [])
         return $http({
             method: 'POST',
             url: "http://localhost/LeadTracker/backend.php",
+            //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
             }, // set the headers so angular passing info as form data (not request payload)
@@ -82,6 +100,7 @@ angular.module('ninzazAngular.services', [])
         return $http({
             method: 'POST',
             url: "http://localhost/LeadTracker/backend.php",
+            //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
             }, // set the headers so angular passing info as form data (not request payload)
@@ -95,6 +114,7 @@ angular.module('ninzazAngular.services', [])
         return $http({
             method: 'POST',
             url: "http://localhost/LeadTracker/backend.php",
+            //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
             }, // set the headers so angular passing info as form data (not request payload)

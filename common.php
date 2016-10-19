@@ -49,6 +49,8 @@ function leadGenerate($jsonDecodedArray,$tablename,$defaultVal,$con){
 }
 
 function getOldLeadByDate($jsonDecodedArray,$tablename,$defaultVal,$con){
+	$UserName = mysql_real_escape_string($jsonDecodedArray["loggedInUserName"]);
+	//echo $UserName;
 	$value1 = "";
 	$key1 = "";
 	foreach ($jsonDecodedArray as $key => $value) {
@@ -63,8 +65,8 @@ function getOldLeadByDate($jsonDecodedArray,$tablename,$defaultVal,$con){
 		}
 		
 	}
-	//$query = "SELECT * from $tablename where $key1 = $value1";
-	$query = "SELECT * from $tablename";
+	$query = "SELECT * from $tablename where $key1 = $value1";
+	//$query = "SELECT * from $tablename WHERE st_createdby = '$UserName'";
 	$fetch = mysql_query($query);
 
 	$return_arr = array();
@@ -89,7 +91,7 @@ function getOldLeadByDate($jsonDecodedArray,$tablename,$defaultVal,$con){
 	    $row_array['st_nextAction'] = $row['st_nextAction'];
 	    $row_array['st_leadStatus'] = $row['st_leadStatus'];
 	    $row_array['st_exClosureDate'] = $row['st_exClosureDate'];
-	    $mainresponse['st_businessDetails'] = $count['st_businessDetails'];
+	    $row_array['st_businessDetails'] = $row['st_businessDetails'];
 	    
 	    array_push($return_arr,$row_array);
 	}
@@ -123,15 +125,24 @@ function getDataByID($jsonDecodedArray,$tablename,$defaultVal,$con){
 	        $mainresponse['st_mobile2'] = $count['st_mobile2'];
 	        $mainresponse['st_landline'] = $count['st_landline'];
 	        $mainresponse['st_address'] = $count['st_address'];
+	        $mainresponse['st_city'] = $count['st_city'];
 	        $mainresponse['st_sector'] = $count['st_sector'];
 	        $mainresponse['st_businessDetails'] = $count['st_businessDetails'];
 	        $mainresponse['st_status'] = $count['st_status'];
 	        $mainresponse['st_website'] = $count['st_website'];
 	        $mainresponse['st_serviceCategory'] = $count['st_serviceCategory'];
-	        $mainresponse['st_requirement'] = $count['st_requirement'];
 	        $mainresponse['st_createdby'] = $count['st_createdby'];
 	        $mainresponse['st_callerdate'] = $count['st_callerdate'];
 
+	        $mainresponse['st_requirement'] = $count['st_requirement'];
+	        $mainresponse['st_standard'] = $count['st_standard'];
+	        $mainresponse['st_nextAction'] = $count['st_nextAction'];
+	        $mainresponse['st_nextActionDate'] = $count['st_nextActionDate'];
+	        $mainresponse['st_salesExecutive'] = $count['st_salesExecutive'];
+	        $mainresponse['st_exClosureDate'] = $count['st_exClosureDate'];
+	        $mainresponse['st_leadStatus'] = $count['st_leadStatus'];
+	        $mainresponse['st_leadValue'] = $count['st_leadValue'];
+	        $mainresponse['st_remarks'] = $count['st_remarks'];
 	    } 
     } else {
     	$mainresponse['isavailable'] = 'false';
@@ -150,12 +161,13 @@ function updateLeadDetails($jsonDecodedArray,$tablename,$defaultVal,$con){
 	$st_requirement = mysql_real_escape_string($jsonDecodedArray["st_requirement"]);
 	$st_remarks = mysql_real_escape_string($jsonDecodedArray["st_remarks"]);
 	$st_nextAction = mysql_real_escape_string($jsonDecodedArray["st_nextAction"]);
+	$st_nextActionDate = mysql_real_escape_string($jsonDecodedArray["st_nextActionDate"]);
 	$st_leadValue = mysql_real_escape_string($jsonDecodedArray["st_leadValue"]);
 	$st_leadStatus = mysql_real_escape_string($jsonDecodedArray["st_leadStatus"]);
 	$st_salesExecutive = mysql_real_escape_string($jsonDecodedArray["st_salesExecutive"]);
 	$st_exClosureDate = mysql_real_escape_string($jsonDecodedArray["st_exClosureDate"]);
 
-	$query = "UPDATE $tablename SET st_serviceCategory='$st_serviceCategory', st_requirement='$st_requirement', st_leadStatus='$st_leadStatus', st_exClosureDate='$st_exClosureDate', st_leadValue='$st_leadValue', st_remarks='$st_remarks', st_nextAction='$st_nextAction', st_salesExecutive='$st_salesExecutive' WHERE st_id = '$st_id'";
+	$query = "UPDATE $tablename SET st_serviceCategory='$st_serviceCategory', st_nextActionDate='$st_nextActionDate', st_requirement='$st_requirement', st_leadStatus='$st_leadStatus', st_exClosureDate='$st_exClosureDate', st_leadValue='$st_leadValue', st_remarks='$st_remarks', st_nextAction='$st_nextAction', st_salesExecutive='$st_salesExecutive' WHERE st_id = '$st_id'";
 	//echo $query;
 
 	$result = mysql_query($query);
@@ -180,6 +192,49 @@ function updateData($jsonDecodedArray,$tablename,$defaultVal,$con){
 	
 
 	$query = "UPDATE $tablename SET st_source='$st_source', st_company='$st_company', st_contactperson='$st_contactperson', st_email='$st_email', st_mobile='$st_mobile', st_requirement='$st_requirement', st_status='$st_status' WHERE st_id = '$st_id'";
+	//echo $query;
+
+	$result = mysql_query($query);
+
+	if($result > 0){
+		$response['status'] = 'success';
+		$response['message'] = 'Updation Successful';
+	}
+
+	echo json_encode($response);
+}
+
+function updateSalesCallerData($jsonDecodedArray,$tablename,$defaultVal,$con){
+	$st_id = mysql_real_escape_string($jsonDecodedArray["st_id"]);
+	$st_source = mysql_real_escape_string($jsonDecodedArray["st_source"]);
+	$st_company = mysql_real_escape_string($jsonDecodedArray["st_company"]);
+	$st_contactperson = mysql_real_escape_string($jsonDecodedArray["st_contactperson"]);
+	$st_email = mysql_real_escape_string($jsonDecodedArray["st_email"]);
+	$st_mobile = mysql_real_escape_string($jsonDecodedArray["st_mobile"]);
+	$st_mobile2 = mysql_real_escape_string($jsonDecodedArray["st_mobile2"]);
+	$st_landline = mysql_real_escape_string($jsonDecodedArray["st_landline"]);
+	$st_address = mysql_real_escape_string($jsonDecodedArray["st_address"]);
+	$st_city = mysql_real_escape_string($jsonDecodedArray["st_city"]);
+	$st_website = mysql_real_escape_string($jsonDecodedArray["st_website"]);
+	$st_createdby = mysql_real_escape_string($jsonDecodedArray["st_createdby"]);
+	$st_sector = mysql_real_escape_string($jsonDecodedArray["st_sector"]);
+	$st_serviceCategory = mysql_real_escape_string($jsonDecodedArray["st_serviceCategory"]);
+	$st_callerdate = mysql_real_escape_string($jsonDecodedArray["st_callerdate"]);
+	$st_businessDetails = mysql_real_escape_string($jsonDecodedArray["st_businessDetails"]);
+	$st_status = mysql_real_escape_string($jsonDecodedArray["st_status"]);
+
+	$st_requirement = mysql_real_escape_string($jsonDecodedArray["st_requirement"]);
+	//$st_standard = mysql_real_escape_string($jsonDecodedArray["st_standard"]);
+	$st_nextAction = mysql_real_escape_string($jsonDecodedArray["st_nextAction"]);
+	$st_nextActionDate = mysql_real_escape_string($jsonDecodedArray["st_nextActionDate"]);
+	$st_salesExecutive = mysql_real_escape_string($jsonDecodedArray["st_salesExecutive"]);
+	$st_exClosureDate = mysql_real_escape_string($jsonDecodedArray["st_exClosureDate"]);
+	$st_leadStatus = mysql_real_escape_string($jsonDecodedArray["st_leadStatus"]);
+	$st_leadValue = mysql_real_escape_string($jsonDecodedArray["st_leadValue"]);
+	$st_remarks = mysql_real_escape_string($jsonDecodedArray["st_remarks"]);
+	
+
+	$query = "UPDATE $tablename SET st_source='$st_source', st_company='$st_company', st_contactperson='$st_contactperson', st_email='$st_email', st_mobile='$st_mobile', st_mobile2='$st_mobile2', st_landline='$st_landline', st_address='$st_address', st_city='$st_city', st_website='$st_website', st_createdby='$st_createdby', st_sector='$st_sector', st_serviceCategory='$st_serviceCategory', st_callerdate='$st_callerdate', st_businessDetails='$st_businessDetails', st_status='$st_status', st_standard='$st_standard', st_nextAction='$st_nextAction', st_nextActionDate='$st_nextActionDate', st_salesExecutive='$st_salesExecutive', st_exClosureDate='$st_exClosureDate', st_leadStatus='$st_leadStatus', st_leadValue='$st_leadValue', st_remarks='$st_remarks' WHERE st_id = '$st_id'";
 	//echo $query;
 
 	$result = mysql_query($query);
@@ -310,6 +365,7 @@ function getLastUpdatedLead($jsonDecodedArray,$tablename,$defaultVal,$con){
 	    $row_array['st_nextAction'] = $row['st_nextAction'];
 	    $row_array['st_leadStatus'] = $row['st_leadStatus'];
 	    $row_array['st_exClosureDate'] = $row['st_exClosureDate'];
+	    $row_array['st_businessDetails'] = $row['st_businessDetails'];
 	    
 	    array_push($return_arr,$row_array);
 	}

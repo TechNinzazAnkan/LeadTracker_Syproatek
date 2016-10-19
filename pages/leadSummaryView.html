@@ -1,0 +1,32 @@
+<div ng-include="'navbar/navbarPage.html'"></div>
+<div class="pagesStarting">
+	<div class="col-md-6" id="prefilledInfo">
+		<h2>Prefilled Information</h2>
+        <a ui-sref="#"><button style="display:none;" class="btn btn-success"> </button></a>
+        <br><br>
+        <div class="inputBlocks">
+            <div id="leftBlockPrefilled" ng-repeat="t in LableNames track by $index">
+                <label>{{t.name}}</label>
+                <span>{{prefilledValues[t.value]}}</span><br/>
+            </div>
+        </div>
+	</div>
+	<div class="col-md-6">
+        <h2>Sales Caller Information</h2>
+        <button id="editSalesBlock" class="btn btn-success" ng-click="showNotification('Edit',currentValue,null)"> Edit </button>
+        <br><br>
+        <div class="inputBlocks">
+            <div id="rightBlockPrefilled" ng-repeat="t in SalesCallerLableNames track by $index">
+                <label>{{t.name}}</label>
+                <span>{{prefilledValues[t.value]}}</span><br/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="loader-backdrop" ng-show="$root.showLoader">
+    <div class="loader-back">
+        <div class="ex-container">
+            <img src="images/load2.gif">
+        </div>
+    </div>
+</div>

@@ -136,7 +136,7 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="callerDate">Caller Date</label>
-                        <input type="date" ng-model="submit_formData.st_callerdate" class="date form-control" id="cdate"  />
+                        <input type="date" ng-model="submit_formData.st_new_callerdate" class="date form-control" id="cdate"  />
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -188,6 +188,7 @@
                     <th>Next Action</th>
                     <th>Lead Status</th>
                     <th>Closure Date</th>
+                    <th>Business Details</th>
                     <th></th>
                 </tr>
             </thead>
@@ -208,6 +209,7 @@
                     <td>{{a.st_nextAction}}</td>
                     <td>{{a.st_leadStatus}}</td>
                     <td>{{a.st_exClosureDate}}</td>
+                    <td>{{a.st_businessDetails}}</td>
                     <td></td>
                 </tr>
             </tbody>

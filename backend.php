@@ -16,6 +16,8 @@ if($jsonDecodedArray['func'] == 'leadGenerate'){
 	updateLeadDetails($jsonDecodedArray,'syprotek_salestracker','updateLeadDetails');
 } else if($jsonDecodedArray['func'] == 'updateData'){
 	updateData($jsonDecodedArray,'syprotek_salestracker','updateData');
+} else if($jsonDecodedArray['func'] == 'updateSalesCallerData'){
+	updateSalesCallerData($jsonDecodedArray,'syprotek_salestracker','updateSalesCallerData');
 } else if($jsonDecodedArray['func'] == 'AgentSignUp'){
 	AgentSignUpLogic($jsonDecodedArray,'syprotek_user_registration','AgentSignUp');
 } else if($jsonDecodedArray['func'] == 'AgentLogin'){
