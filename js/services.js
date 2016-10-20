@@ -7,7 +7,7 @@ angular.module('ninzazAngular.services', [])
     	//console.log("Into Service File", JSON.stringify(senddata));
         return $http({
             method: 'POST',
-            url: "http://localhost/LeadTracker/backend.php",
+            url: "http://syproatek.org/LeadTracker/backend.php",
             //url: "http://localhost/LeadTracker_Syproatek/backend.php",
 			headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
@@ -21,7 +21,7 @@ angular.module('ninzazAngular.services', [])
         //console.log("Into Service File", JSON.stringify(data));
         return $http({
             method: 'POST',
-            url: "http://localhost/LeadTracker/backend.php",
+            url: "http://syproatek.org/LeadTracker/backend.php",
             //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
@@ -34,7 +34,7 @@ angular.module('ninzazAngular.services', [])
         //console.log("Into Service File", JSON.stringify(data));
         return $http({
             method: 'POST',
-            url: "http://localhost/LeadTracker/backend.php",
+            url: "http://syproatek.org/LeadTracker/backend.php",
             //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
@@ -50,7 +50,7 @@ angular.module('ninzazAngular.services', [])
         //console.log("Into Get Leads File", JSON.stringify(req));
         return $http({
             method: 'POST',
-            url: "http://localhost/LeadTracker/backend.php",
+            url: "http://syproatek.org/LeadTracker/backend.php",
             //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
@@ -67,7 +67,7 @@ angular.module('ninzazAngular.services', [])
         //console.log("Into Get Leads File", JSON.stringify(req));
         return $http({
             method: 'POST',
-            url: "http://localhost/LeadTracker/backend.php",
+            url: "http://syproatek.org/LeadTracker/backend.php",
             //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
@@ -83,7 +83,7 @@ angular.module('ninzazAngular.services', [])
     service.updateLeadsUsingID = function(req) {
         return $http({
             method: 'POST',
-            url: "http://localhost/LeadTracker/backend.php",
+            url: "http://syproatek.org/LeadTracker/backend.php",
             //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
@@ -99,7 +99,7 @@ angular.module('ninzazAngular.services', [])
     service.AgentSignUpService = function(req) {
         return $http({
             method: 'POST',
-            url: "http://localhost/LeadTracker/backend.php",
+            url: "http://syproatek.org/LeadTracker/backend.php",
             //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
@@ -113,7 +113,7 @@ angular.module('ninzazAngular.services', [])
         //console.log("Into Service File", JSON.stringify(req));
         return $http({
             method: 'POST',
-            url: "http://localhost/LeadTracker/backend.php",
+            url: "http://syproatek.org/LeadTracker/backend.php",
             //url: "http://localhost/LeadTracker_Syproatek/backend.php",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'

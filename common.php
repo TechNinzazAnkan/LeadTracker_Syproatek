@@ -1,16 +1,16 @@
 <?php
 
-/*$servername = "localhost";
+$servername = "localhost";
 $username = "syproate_user1";
 $password = "(XTThPO_7s.#";
 $dbname = "syproate_lead_tracker";
-$con = mysql_connect($servername,$username,$password);*/
+$con = mysql_connect($servername,$username,$password);
 
-$servername = "localhost";
+/*$servername = "localhost";
 $username = "root";
 $password = "password";
 $dbname = "syproate_lead_tracker";
-$con = mysql_connect($servername,$username,$password);
+$con = mysql_connect($servername,$username,$password);*/
 
 if($con){
 	//echo "Connected";
@@ -49,7 +49,7 @@ function leadGenerate($jsonDecodedArray,$tablename,$defaultVal,$con){
 }
 
 function getOldLeadByDate($jsonDecodedArray,$tablename,$defaultVal,$con){
-	$UserName = mysql_real_escape_string($jsonDecodedArray["loggedInUserName"]);
+	//$UserName = mysql_real_escape_string($jsonDecodedArray["loggedInUserName"]);
 	//echo $UserName;
 	$value1 = "";
 	$key1 = "";
@@ -66,6 +66,7 @@ function getOldLeadByDate($jsonDecodedArray,$tablename,$defaultVal,$con){
 		
 	}
 	$query = "SELECT * from $tablename where $key1 = $value1";
+	//echo $query;
 	//$query = "SELECT * from $tablename WHERE st_createdby = '$UserName'";
 	$fetch = mysql_query($query);
 

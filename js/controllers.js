@@ -383,8 +383,8 @@ angular.module('ninzazAngular.controllers', ['ui.router','ngDialog'])
         var m = d.getMonth()+1;
         var date = d.getFullYear()+'-'+m+'-'+d.getDate();
 
-        getLeadsData.loggedInUserName = sessionStorage.getItem('UserName');
-        getLeadsData.st_callerdate = date;
+        //getLeadsData.loggedInUserName = sessionStorage.getItem('UserName');
+        //getLeadsData.st_callerdate = date;
         getLeadsData.func = 'getLeadByDate';
         
         getPrefilledLeads.getLeads(getLeadsData).success(function(res) {
